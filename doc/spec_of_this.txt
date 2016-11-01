@@ -1,0 +1,11 @@
+SentenceGenerator Specification
+
+本プログラムは、著名な自然言語処理の教科書である「SPEECH AND LANGUAGE PROCESSING 2nd edition （D.JURAFSKY 先生 と JAMES H. MARTIN 先生）」の Section 4 Ngram の演習問題を解く過程で書かれたものであります。
+
+主な機能は以下のごとしです。
+
+1) コーパスからNgramモデルを計算し、dumpにて出力します。
+2) Laplase smoothingを行います。
+3) Kazh Backoff スムージングを行います。
+4) コーパスを分割してCross-entropyを計算します。
+5) 著者推定を行います。
