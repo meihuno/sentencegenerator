@@ -16,8 +16,7 @@ public class BackOffSmoothingTest {
 		String test_path = System.getProperty("user.dir");  
 		String smoothingType = "backoff";
 		dirname = test_path + "/data/sample1";
-		sg = new SentenceGenerator( NGram.retNGramModel(dirname, smoothingType) ); 
-		
+		sg = new SentenceGenerator( NGram.retNGramModel(dirname, smoothingType) ); 	
 	}
 	
 	/** 文生成確率の動作確認用テストメソッド。

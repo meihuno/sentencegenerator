@@ -33,33 +33,7 @@ public class SentenceGenerator {
     	String rstr = langmodel.retRandomSentence(max_length, headmax, seqmax);
 		return rstr;
 	}
-	        
-    /**
-     * NGramモデルを生成するメソッド。 
-     * @param dirname テキストファイルが格納されたディレクトリ。
-     * @param smoothingType NGramのタイプ。"ml"は最尤推定、"laplase"はラプラススムージング、"backoff"はkatzのBackoffスムージングを行う。
-     * */
-	public void createNGramModel(String dirname, String smoothingType) throws Exception {
-		try {	
-			ArrayList<String> fileContentStringArray;
-			fileContentStringArray = FindFile.retFileContentStringArray(dirname);
-			WordFilter wordfilter = new WordFilter(new MorphologicalAnalyzer());
-			ArrayList<ArrayList<String>> sensenArray = new ArrayList<ArrayList<String>>();
-			
-			for(String fileContent: fileContentStringArray) {
-				 // System.out.println(fileContent);
-				 ArrayList<ArrayList<String>> sensentmpArray =  wordfilter.retSentenceArrayArray(fileContent);
-				 for(ArrayList<String> wordArray: sensentmpArray) {
-					 sensenArray.add(wordArray);
-				 }
-			 }
-			
-			langmodel = new NGram(sensenArray, smoothingType);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
+	            
 	/**
 	 * モデルをファイルにダンプするメソッド。
 	 * @param filename ダンプするファイル名。 

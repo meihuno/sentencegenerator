@@ -4,7 +4,7 @@
 
   <groupId>nlp.sample</groupId>
   <artifactId>sentencegenerator</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <packaging>jar</packaging>
 
   <name>sentencegenerator</name>
@@ -108,9 +108,9 @@
            <branch>refs/heads/mvn-repo</branch>
            <includes><include>**/*</include></includes>
            <!-- Github リポジトリ名 -->
-           <repositoryName>${repositoryName}</repositoryName>
+           <repositoryName>sentencegenerator</repositoryName>
            <!-- Github リポジトリユーザー名 -->
-           <repositoryOwner>${ownerName}</repositoryOwner>
+           <repositoryOwner>meihuno</repositoryOwner>
          </configuration>
          <executions>
             <execution>

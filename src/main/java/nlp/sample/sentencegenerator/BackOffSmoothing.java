@@ -20,7 +20,7 @@ public class BackOffSmoothing extends WordSequenceProb {
 	private GoodTuringEstimater goodturingvalue;
 	
 	/**
-	 * コンストラクタにてalphaの計算とGoodTuring推定値による最尤推定値の修正を行っている。
+	 * コンストラクタにてalphaの計算とGoodTuring推定値による最尤推定値の修正を行っています。
 	 * @param sensenArray 単語区切り結果を格納したArrayListを格納したArrayList
 	 * */
 	BackOffSmoothing(ArrayList<ArrayList<String>> sensenArray) {
