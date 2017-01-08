@@ -19,7 +19,25 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <github.global.server>github</github.global.server>  
+     
+        <!-- global.host、他、プロパティを設定する場合は不要 -->
+        <github.global.server>github</github.global.server>
+        
+        <!-- Github の場合に使用 -->
+        <github.global.host>api.github.com</github.global.host>   
+        
+        <!-- Github リポジトリユーザー名 -->
+        <!--  <github.global.userName>meihuno</github.global.userName> -->
+        
+        <!-- Github リポジトリユーザーのパスワード -->
+        <!--  <github.global.password>wasureta40</github.global.password> -->
+        
+        <!-- Github リポジトリ名 -->
+        <github.global.repositoryName>mvn-repo</github.global.repositoryName>
+        
+        <!-- Github リポジトリユーザー名、または Organization 名 -->
+        <github.global.repositoryOwner>meihuno</github.global.repositoryOwner>
+        
   </properties>
 
   <distributionManagement>
@@ -129,7 +147,7 @@
          <version>0.12</version>
          <configuration>
            <!--  <merge>true</merge> -->
-                
+      
            <!-- Git コミットメッセージ -->
            <message>Maven artifacts for ${project.version}</message>
            <noJekyll>true</noJekyll>
@@ -138,12 +156,14 @@
            
            <!-- distributionManagement の url と一致させる -->
            <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-           
            <!-- リモートブランチ名 -->
-           <branch>refs/heads/mvn-repo2</branch>
+           <branch>refs/heads/mvn-repo</branch>
            <includes><include>**/*</include></includes>
-           
+           <!-- Github リポジトリ名 -->
            <repositoryName>sentencegenerator</repositoryName>
+           <!-- Github リポジトリユーザー/メールアドレス -->
+           <repositoryuserName>meihuno.huno.san@gmail.com</repositoryuserName>
+           
            <!-- Github リポジトリユーザー名 -->
            <repositoryOwner>meihuno</repositoryOwner>
            

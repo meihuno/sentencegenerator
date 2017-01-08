@@ -265,6 +265,10 @@ public class WordSequenceProb {
 			String key = wordsequencemap.retKey(sublist);
 			if(wordsequencemap.hasKey(key) == true) {
 				tmpprob = wordsequencemap.retCurrentWordSequenceProb(sublist);
+				
+				//System.out.println(sublist);
+				//System.out.println(tmpprob);
+				
 			} else {
 				tmpprob = retNgramLogProb(key, gram_n);
 			}

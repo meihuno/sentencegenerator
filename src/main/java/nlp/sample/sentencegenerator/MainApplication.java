@@ -19,6 +19,10 @@ public class MainApplication {
 		System.out.println(sg.retRandomSentence(100, true, false));
 		System.out.println(sg.retRandomSentence(100, false, false));
 		
+		CrossEntropy.showCrossEntropy(dirname, smoothingType);
+		String smoothingType2 = "laplase";
+		CrossEntropy.showCrossEntropy(dirname, smoothingType2);
+		
 	}
 
 }

@@ -150,6 +150,7 @@ public class WordSequenceMap {
 			String key = retKey(wordArray);
 			WordSequence wsq = wordseqmap.get(key);
 			return wsq.prob;
+			
 		} else {
 			return Math.log(0.0);
 		}

@@ -53,6 +53,8 @@ public class FindFile {
 		} catch (IOException e) {
 			System.err.println("IOException");
 		}
+		rstr = rstr.replace(":", "<colon>");
+		rstr = rstr.replace("@", "<atmark>");
 		return rstr;
 	}
 	

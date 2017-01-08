@@ -65,6 +65,10 @@ public class CrossEntropy {
 			tmplogprob_lang = ngrammodel22.retGenerationalLogProb(senArray);
 			tmpprob = Math.exp(tmplogprob_lang);
 	
+			//System.out.println(senArray);
+			//System.out.println(tmplogprob_lang);
+			//System.out.println(tmplogprob_model);
+			
 			valueL = valueL + (tmpprob * tmplogprob_lang);
 			valueM = valueM + (tmpprob * tmplogprob_model);
 		}
